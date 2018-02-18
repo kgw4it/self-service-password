@@ -45,6 +45,14 @@
                   ><i class="fa fa-fw fa-terminal"></i> <?php echo $messages["menusshkey"]; ?></a>
                 </li>
                 <?php } ?>
+                <?php if ( $use_properties_update ) { ?>
+                <li class="<?php if ( $action === "propertiesupdate" ) { echo "active"; } ?>">
+                  <a href="?action=propertiesupdate"
+                     data-toggle="menu-popover"
+                     data-content="<?php echo htmlentities(strip_tags($messages["changehelppropertiesupdate"])); ?>"
+                  ><i class="fa fa-fw fa-terminal"></i> <?php echo $messages["menupropertiesupdate"]; ?></a>
+                </li>
+                <?php } ?>
               </ul>
             </div>
           </div>

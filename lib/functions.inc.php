@@ -144,11 +144,11 @@ function generate_sms_token( $sms_token_length ) {
 # Get message criticity
 function get_criticity( $msg ) {
 
-    if ( preg_match( "/nophpldap|phpupgraderequired|nophpmhash|nokeyphrase|ldaperror|nomatch|badcredentials|passworderror|tooshort|toobig|minlower|minupper|mindigit|minspecial|forbiddenchars|sameasold|answermoderror|answernomatch|mailnomatch|tokennotsent|tokennotvalid|notcomplex|smsnonumber|smscrypttokensrequired|nophpmbstring|nophpxml|smsnotsent|sameaslogin|sshkeyerror/" , $msg ) ) {
+    if ( preg_match( "/nophpldap|phpupgraderequired|nophpmhash|nokeyphrase|ldaperror|nomatch|badcredentials|passworderror|tooshort|toobig|minlower|minupper|mindigit|minspecial|forbiddenchars|sameasold|answermoderror|answernomatch|mailnomatch|tokennotsent|tokennotvalid|notcomplex|smsnonumber|smscrypttokensrequired|nophpmbstring|nophpxml|smsnotsent|sameaslogin|sshkeyerror|updatepropertieserror/" , $msg ) ) {
     return "danger";
     }
 
-    if ( preg_match( "/(login|oldpassword|newpassword|confirmpassword|answer|question|password|mail|token|sshkey)required|badcaptcha|tokenattempts/" , $msg ) ) {
+    if ( preg_match( "/(login|oldpassword|newpassword|confirmpassword|answer|question|password|mail|token|sshkey|updateproperties)required|badcaptcha|tokenattempts/" , $msg ) ) {
         return "warning";
     }
 
@@ -420,6 +420,27 @@ function change_sshkey( $ldap, $dn, $attribute, $sshkey ) {
         error_log("LDAP - Modify $attribute error $errno (".ldap_error($ldap).")");
     } else {
         $result = "sshkeychanged";
+    }
+
+    return $result;
+}
+
+# Update properties
+# @return result code
+function update_properties($ldap, $dn, $properties) {
+
+    $result = "";
+
+    # Commit modification on directory
+    $replace = ldap_mod_replace($ldap, $dn, $properties);
+
+    $errno = ldap_errno($ldap);
+
+    if ( $errno ) {
+        $result = "updatepropertieserror";
+        error_log("LDAP - Modify properties error $errno (".ldap_error($ldap).")");
+    } else {
+        $result = "updatepropertieschanged";
     }
 
     return $result;
