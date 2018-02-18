@@ -130,6 +130,8 @@ $messages['emptysendsmsform'] = "Get a reset code";
 $messages['sameaslogin'] = "Your new password is identical to your login";
 $messages['policydifflogin'] = "Your new password may not be the same as your login";
 
+$message['changehelppropertiesupdate'] = "Update your profile properties";
+$message['menupropertiesupdate'] = "Profile Update";
 $message['emptyupdatepropertiesform'] = "Update properties of your profile";
 $message['updatepropertieshelp'] = "Here you can update properties of you profile. Only those properties will get updated that you fill out.";
 $message['updatepropertieserror'] = "Unable to update the provided properties";

@@ -132,6 +132,8 @@ $messages['changesshkeymessage'] = "Hallo {login}, \n\nDer SSH-Schlüssel wurde 
 $messages['menusshkey'] = "SSH Schlüssel";
 $messages['changesshkeysubject'] = "Ihr SSH-Schlüssel wurde geändert";
 
+$message['changehelppropertiesupdate'] = "Aktualisiere deine Profilinformationen";
+$message['menupropertiesupdate'] = "Profilaktualisierung";
 $message['emptyupdatepropertiesform'] = "Profileinformationen aktualiseren";
 $message['updatepropertieshelp'] = "Hier können Sie ihre Profilinformationen aktualisieren. Es werden nur jene Felder aktualisiert, die Sie ausfüllen.";
 $message['updatepropertieserror'] = "Das Aktualisieren ist leider fehlgeschlagen";
