@@ -219,7 +219,7 @@ if ( $result === "" ) {
     if ($mail and $notify_on_properties_update) {
         $propertiesstring = '';
         foreach($properties as $property => $value) {
-            $propertiesstring += $property . ' = ' . $value . "\n";
+            $propertiesstring .= $messages["prop-" . $property] . ': ' . $value . "\n";
         }
         $data = array( "login" => $login, "mail" => $mail, "properties" => $propertiesstring);
         if ( !send_mail($mailer, $mail, $mail_from, $mail_from_name, $messages["updatepropertiessubject"], $messages["updatepropertiesmessage"].$mail_signature, $data) ) {
