@@ -197,7 +197,7 @@ if ( $result === "" ) {
                 <div class="col-sm-8">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-fw fa-terminal"></i></span>
-                        <input type="text" name="prop-<?php echo $property; ?>" id="prop-<?php echo $property; ?>" class="form-control" placeholder="<?php echo ["prop-" . $property . "-placeholder"]; ?>" />
+                        <input type="text" name="prop-<?php echo $property; ?>" id="prop-<?php echo $property; ?>" class="form-control" placeholder="<?php echo $messages["prop-" . $property . "-placeholder"]; ?>" />
                     </div>
                 </div>
             </div>
