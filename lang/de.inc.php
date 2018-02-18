@@ -139,6 +139,6 @@ $messages['updatepropertieshelp'] = "Hier können Sie Ihre Profilinformationen a
 $messages['updatepropertieserror'] = "Das Aktualisieren ist leider fehlgeschlagen";
 $messages['updatepropertieschanged'] = "Ihre Profilinformationen wurden aktualisiert.";
 $messages['updatepropertiessubject'] = "Ihre Profilinformationen wurden aktualisiert";
-$messages['updatepropertiesmessage'] = "Hallo {login},\n\nFolgenden Informationen Ihres Profils wurden aktualisiert:\n{properties}\nWenn Sie diese Änderung nicht eingeleitet haben, wenden Sie sich bitte umgehend an Ihren Administrator.";
+$messages['updatepropertiesmessage'] = "Hallo {login},\n\nFolgende Informationen Ihres Profils wurden aktualisiert:\n{properties}\nWenn Sie diese Änderung nicht eingeleitet haben, wenden Sie sich bitte umgehend an Ihren Administrator.";
 $messages['prop-mobile'] = "Telefonnummer";
 $messages['prop-mobile-placeholder'] = "z.B. +436641234567";
