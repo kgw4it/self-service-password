@@ -131,3 +131,12 @@ $messages['emptysshkeychangeform'] = "Ändern Sie Ihren SSH-Schlüssel";
 $messages['changesshkeymessage'] = "Hallo {login}, \n\nDer SSH-Schlüssel wurde geändert.\n\nWenn Sie diese Änderung nicht eingeleitet haben, wenden Sie sich bitte umgehend an Ihren Administrator.";
 $messages['menusshkey'] = "SSH Schlüssel";
 $messages['changesshkeysubject'] = "Ihr SSH-Schlüssel wurde geändert";
+
+$message['emptyupdatepropertiesform'] = "Profileinformationen aktualiseren";
+$message['updatepropertieshelp'] = "Hier können Sie ihre Profilinformationen aktualisieren. Es werden nur jene Felder aktualisiert, die Sie ausfüllen.";
+$message['updatepropertieserror'] = "Das Aktualisieren ist leider fehlgeschlagen";
+$message['updatepropertieschanged'] = "Ihre Profilinformationen wurden aktualisiert.";
+$message['updatepropertiessubject'] = "Ihre Profilinformationen wurden aktualisiert";
+$message['updatepropertiesmessage'] = "Hallo {login},\n\nFolgenden Informationen ihres Profils wurden aktualisiert:\n{properties}\nWenn Sie diese Änderung nicht eingeleitet haben, wenden Sie sich bitte umgehend an Ihren Administrator.";
+$message['prop-mobile'] = "Telefonnummer";
+$message['prop-mobile-placeholder'] = "z.B. +436641234567";

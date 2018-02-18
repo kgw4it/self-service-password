@@ -129,3 +129,12 @@ $messages['emptysetquestionsform'] = "Set your password reset questions";
 $messages['emptysendsmsform'] = "Get a reset code";
 $messages['sameaslogin'] = "Your new password is identical to your login";
 $messages['policydifflogin'] = "Your new password may not be the same as your login";
+
+$message['emptyupdatepropertiesform'] = "Update properties of your profile";
+$message['updatepropertieshelp'] = "Here you can update properties of you profile. Only those properties will get updated that you fill out.";
+$message['updatepropertieserror'] = "Unable to update the provided properties";
+$message['updatepropertieschanged'] = "Your provided properties have been updated.";
+$message['updatepropertiessubject'] = "Some of your properties have been changed";
+$message['updatepropertiesmessage'] = "Hello {login},\n\nThe following properties have been changed:\n{properties}\nIf you didn't initiate this change, please contact your administrator immediately.";
+$message['prop-mobile'] = "Phone Number";
+$message['prop-mobile-placeholder'] = "i.e. +436641234567";

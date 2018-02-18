@@ -278,6 +278,17 @@ $recaptcha_size = "normal";
 # Useful when allow_url_fopen=0 ex. $recaptcha_request_method = '\ReCaptcha\RequestMethod\CurlPost';
 $recaptcha_request_method = null;
 
+## Properties Update
+$use_properties_update = true;
+# can be one in (mobile)
+$properties_update_list = array(
+    'mobile',
+);
+
+# Notify users anytime properties are changed
+## Requires mail configuration
+$notify_on_properties_update = true;
+
 ## Default action
 # change
 # sendtoken
