@@ -203,8 +203,11 @@ $mail_newline = PHP_EOL;
 # Use sms
 $use_sms = true;
 # SMS method (mail, api)
-$sms_method = "mail";
+$sms_method = "api";
 $sms_api_lib = "lib/smsapi.inc.php";
+$sms_gateway_url = "";
+$sms_gateway_username = "";
+$sms_gateway_password = "";
 # GSM number attribute
 $sms_attribute = "mobile";
 # Partially hide number

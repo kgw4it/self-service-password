@@ -26,13 +26,28 @@
  * @return 1 if message sent, 0 if not
  */
 function send_sms_by_api($mobile, $message) {
+    global $sms_gateway_url;
+    global $sms_gateway_username;
+    global $sms_gateway_password;
 
-    # PHP code
-    # ...
+    $data = array(
+        'text' => $message,
+        'mobiles' => array($mobile),
+    );
 
-    # Or call to external script
-    # $command = escapeshellcmd(/path/to/script).' '.escapeshellarg($mobile).' '.escapeshellarg($message);
-    # exec($command);
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json; charset=UTF-8'));
+    curl_setopt($ch, CURLOPT_HEADER, 1);
+    curl_setopt($ch, CURLOPT_URL, $sms_gateway_url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+    curl_setopt($ch, CURLOPT_USERPWD, $sms_gateway_username . ":" . $sms_gateway_password);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
-    return 1;
+    $response = curl_exec ($ch);
+    $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+    curl_close ($ch);
+
+    return $statusCode == 200;
 }
