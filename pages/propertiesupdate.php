@@ -104,7 +104,7 @@ if ( $result === "" ) {
                 } else {
 
                     # Get user email for notification
-                    if ( $notify_on_sshkey_change ) {
+                    if ( $notify_on_properties_update ) {
                         $mailValues = ldap_get_values($ldap, $entry, $mail_attribute);
                         if ( $mailValues["count"] > 0 ) {
                             $mail = $mailValues[0];
@@ -132,13 +132,6 @@ if ( $result === "" ) {
                     if ( $errno ) {
                         $result = "badcredentials";
                         error_log("LDAP - Bind user error $errno  (".ldap_error($ldap).")");
-                    } else {
-
-                        # Rebind as Manager if needed
-                        if ( $who_change_sshkey == "manager" ) {
-                            $bind = ldap_bind($ldap, $ldap_binddn, $ldap_bindpw);
-                        }
-
                     }}}}}
 
 }
